@@ -15,4 +15,4 @@ ReactDOM.render(
   rootElement
 );
 
-// use components tool of react either redux provider is working or not.
+// use components tool of react to check => either redux provider is working or not.

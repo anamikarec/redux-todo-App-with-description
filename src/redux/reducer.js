@@ -14,7 +14,7 @@ function reducer(state = initState, action) {
   switch (action.type) {
     case actionConstants.ADD_TODO: {
       // this doesn't update the todos , becuase the object referenece does n't change.
-      // that is why we spread the state, so it point to the new state
+      // that is why we spread the state, so it point to the new object
       // state.todos.push(action.payload);
       // console.log(state);
       // return state;
@@ -46,7 +46,7 @@ function reducer(state = initState, action) {
 
 export default reducer;
 
-// with an example jow object referenece does n't change
+// with an example how object referenece does n't change
 
 const a = { b: 10 };
 const b = { b: 10 };
@@ -54,7 +54,7 @@ console.log(a === b);
 // true // false
 // false is correct => these are differenet objects
 // similar to example => house of the address
-// two identical houses => then never have the same addressses
+// two identical houses => but never have the same addresses
 
 // reducer is description on how your store will get updated.
 // we are using redux state management tool => that's why we are not using useState()

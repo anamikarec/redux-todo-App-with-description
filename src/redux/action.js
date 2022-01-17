@@ -1,6 +1,6 @@
 //constants
 // We don't mess with name
-// in switch case in reducer, if there is nothing like case then it should return the default and need to return state without changing
+// in switch case in reducer, if there is no case matches then it should return the default and need to return state without changing
 export const actionConstants = {
   ADD_TODO: "ADD_TODO",
   REMOVE_TODO_ITEM: "REMOVE_TODO",
@@ -24,7 +24,7 @@ export const addTodo = ({ title, status, id }) => {
     }
   };
 };
-// second is wothout using return.
+// second is without using return.
 export const removeTodo = (id) => ({
   type: actionConstants.REMOVE_TODO_ITEM,
   payload: {
