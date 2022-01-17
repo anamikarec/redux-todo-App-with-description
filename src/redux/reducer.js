@@ -30,7 +30,14 @@ function reducer(state = initState, action) {
       };
     }
     case actionConstants.TOGGLE_TODO_STATUS: {
-      return state;
+      return {
+        ...state,
+        todos: state.todos.map((item) =>
+          item.id === action.payload.id
+            ? { ...item, status: !item.status }
+            : item
+        )
+      };
     }
     default:
       return state;
