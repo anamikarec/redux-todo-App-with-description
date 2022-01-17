@@ -24,7 +24,10 @@ function reducer(state = initState, action) {
       };
     }
     case actionConstants.REMOVE_TODO_ITEM: {
-      return state;
+      return {
+        ...state,
+        todos: state.todos.filter((item) => item.id !== action?.payload?.id)
+      };
     }
     case actionConstants.TOGGLE_TODO_STATUS: {
       return state;
