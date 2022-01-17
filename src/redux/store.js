@@ -14,3 +14,11 @@ import reducer from "./reducer";
 export const store = createStore(reducer); //,initState);
 
 console.log(store.getState());
+
+//create actions
+//create reducer
+// create store
+// pass store in the provider
+// select data from store
+// pass it to required elements
+// dispatch an action depending on user input
